@@ -3,10 +3,6 @@ var block1,block2,block3,block4;
 var ball, edges;
 var music;
 
-function preload(){
-music = loadSound("music.mp3");
-}
-
 function setup(){
 canvas = createCanvas(800,600);
 
@@ -40,14 +36,12 @@ ball.bounceOff(edges);
 
 if(block1.isTouching(ball) && ball.bounceOff(block1)){
 ball.shapeColor ="blue";
-music.play();
 }
 
 if(block2.isTouching(ball)){
     ball.shapeColor = "orange";
     ball.velocityX = 0;
     ball.velocityY = 0;
-    music.stop();
 }
 
 if(block3.isTouching(ball) && ball.bounceOff(block3)){
